@@ -11,9 +11,7 @@
 | 6/6  | HTML & CSS 구조 | [2025-06-06_HTML_CSS](./2025-06-06_HTML_CSS) |
 | 6/7  | JavaScript DOM & 이벤트 | [2025-06-07_JS](./2025-06-07_JS) |
 | 6/8  | Git 버전관리 | [2025-06-08_Git](./2025-06-08_Git) |
-| 6/9  | Ubuntu 환경 설정 | [2025-06-09_Ubuntu](./2025-06-09_Ubuntu) |
-| 6/10 | Linux 명령어 실습 | 🛠 (Ubuntu 내부 포함 또는 직접 작성 예정) |
-| 6/11 | Docker 기본 개념 | 🛠 (추가 예정) |
+| 6/9  | Ubuntu, Linux, Docker 기초 | [2025-06-09_Ubuntu](./2025-06-09_Ubuntu) |
 | 6/12 | OpenAI API CLI 호출 | [2025-06-12_OpenAI_API](./2025-06-12_OpenAI_API) |
 
 ## 📂 사용 방법
