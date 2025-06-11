@@ -6,11 +6,11 @@
 
 ## 📂 프로젝트 구조
 
-* `Kotlin_Guideline.md`: 이 프로젝트의 전체 학습 가이드라인 및 로드맵 문서.
-* `Kotlin_Phase_1/`: Kotlin 언어의 기초 문법 학습 및 실습 코드.
-* `Kotlin_Phase_2/`: Spring Core 및 IoC/DI 개념 학습 및 실습 코드.
-* `Kotlin_Phase_3/`: Spring Web (MVC) 및 REST API 개발 학습 및 실습 코드.
-* `Kotlin_Phase_4/`: 데이터베이스 연동 (JPA / Spring Data JPA) 기초 학습 및 실습 코드.
+* `Guideline.md`: 이 프로젝트의 전체 학습 가이드라인 및 로드맵 문서.
+* `Phase1`: Kotlin 언어의 기초 문법 학습 및 실습 코드.
+* `Phase2`: Spring Core 및 IoC/DI 개념 학습 및 실습 코드.
+* `Phase3`: Spring Web (MVC) 및 REST API 개발 학습 및 실습 코드.
+* `Phase4`: 데이터베이스 연동 (JPA / Spring Data JPA) 기초 학습 및 실습 코드.
 
 ---
 
