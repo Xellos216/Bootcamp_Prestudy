@@ -142,3 +142,47 @@ fun main() {
     }
     println("최종 학점은 $grade 입니다.")
 }
+
+---
+
+## 1. 배운 내용 요약
+
+* ... (기존 내용) ...
+* **반복문 (`for`, `while`):** `for` (범위, 역순, 단계), `forEachIndexed` (컬렉션), `while`, `do-while` 문을 사용하여 코드 블록을 반복 실행하는 방법을 학습했습니다.
+
+---
+
+## 2. 문법 개념 간단히 설명
+
+### 2.4. 반복문 (Loops)
+
+코드 블록을 여러 번 반복하여 실행할 때 사용합니다.
+
+* **`for` 문:** 정해진 횟수만큼 반복하거나 컬렉션을 순회할 때 주로 사용합니다. 범위(`..`, `downTo`, `step`)나 컬렉션(`.forEach`, `.forEachIndexed`)과 함께 사용합니다.
+    ```kotlin
+    // 1부터 5까지
+    for (i in 1..5) { println(i) }
+    // 5부터 1까지 역순
+    for (i in 5 downTo 1) { println(i) }
+    // 1부터 10까지 2씩 증가
+    for (i in 1..10 step 2) { println(i) }
+    // 리스트 순회
+    val items = listOf("A", "B")
+    for (item in items) { println(item) }
+    ```
+* **`while` 문:** 특정 조건이 참(true)인 동안 코드 블록을 반복 실행합니다. 조건이 거짓(false)이 되면 반복을 멈춥니다.
+    ```kotlin
+    var count = 0
+    while (count < 3) {
+        println(count)
+        count++
+    }
+    ```
+* **`do-while` 문:** `while` 문과 유사하지만, 코드 블록을 **최소 한 번** 실행한 후 조건을 검사합니다.
+    ```kotlin
+    var input: String
+    do {
+        print("입력: ")
+        input = readlnOrNull() ?: ""
+    } while (input != "exit")
+    ```

@@ -74,6 +74,68 @@ fun main() {
         else -> "F"
     }
     println("최종 학점은 $grade 입니다.")
+
+    // 6. for 반복문 사용 예제
+    println("\n--- for 반복문 ---") // 출력 구분을 위한 줄 추가
+
+    // 1부터 5까지 출력 (정수 범위)
+    for (i in 1..5) { //1부터 5까지 포함시
+        println("for 루피 (1..5): $i")
+    }
+
+    println("-----")
+
+    // 5부터 1까지 역순으로 출력
+    for (i in 5 downTo 1) { // 5부터 1까지 역순으로
+        println("for 루프 (5 downTo 1): $i")
+    }
+
+    println("-----")
+
+    // 1부터 10까지 2씩 증가하며 출력 (단계별 증가하며)
+    for (i in 1..10 step 2) { // 1, 3, 5, 7, 9 출력
+        println("for 루프 (1..10 step 2): $i")
+    }
+
+    println("-----")
+
+    // 컬렉션(List) 순회
+    val programmingLanguages = listOf("Kotlin", "Java", "Python", "JavaScript") //
+    println("좋아하는 프로그래밍 언어:")
+    for (lang in programmingLanguages) {
+        println("- $lang")
+    }
+
+    // 인덱스와 함께 컬렉션 순회 (forEachIndexed)
+    programmingLanguages.forEachIndexed { index, lang ->
+        println("인덱스 $index: $lang")
+    }
+
+    // 7.while 반복문 사용 예제
+    println("|n--- while 반복문 ---") // 출력 구분을 위한 줄 추가
+
+    var counter = 0
+    while (counter < 3) {
+        println("while 루프: $counter")
+        counter++ // counter = counter + 1 과 동일
+    }
+
+    println("-----")
+
+    //do-while 반복문 예제 (조건을 나중에 검사, 최소 한 번 실행 보장)
+    var userInput: String // 사용자 입력을 받을 변수
+
+    do {
+        println("이름을 입력하세요 (종료하려면 'exit' 입력): ")
+        // Vscode의 input ()과 유사하게, Kotlin은 readln() 함수를 사용합니다.
+        // 이 부분은 Intellij IDEA의 'Run' 탭 콘솔에서는 입력이 불가능합니다.
+        // 반드시 'Terminal' 탭을 열고 './gradlew run' 명령으로 실행해야 입력 가능합니다.
+        userInput = readlnOrNull() ?: "" // readlnOrNull()은 null을 반환할 수 있으므로,
+        if (userInput != "exit") {
+            println("환영합니다, $userInput 님!")
+        }
+    }while (userInput != "exit") // 'exit'이 아니면 계속 반복
+    println("프로그램을 종료합니다.")
 }
 
 
