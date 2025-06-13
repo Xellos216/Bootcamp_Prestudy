@@ -1,6 +1,6 @@
-# 📚 Phase 1 - Day 1: Kotlin 기초 - 변수와 조건문
+# 📚 Phase 1 - Day 1: Kotlin 기초 - 변수, 조건문, 반복문
 
-오늘은 Kotlin 개발 환경을 설정하고, Kotlin 언어의 가장 기본적인 요소인 변수와 조건문을 학습했습니다. IntelliJ IDEA 사용에 익숙해지고, 기본적인 코드 작성 및 디버깅 흐름을 경험했습니다.
+오늘은 Kotlin 개발 환경을 설정하고, Kotlin 언어의 가장 기본적인 요소인 변수, 조건문, 그리고 반복문을 학습했습니다. IntelliJ IDEA 사용에 익숙해지고, 기본적인 코드 작성 및 디버깅 흐름을 경험했습니다.
 
 ---
 
@@ -11,6 +11,7 @@
 * **변수 선언과 데이터 타입:** `val` (읽기 전용)과 `var` (변경 가능)을 사용하여 다양한 타입의 변수를 선언하는 방법을 학습했습니다. (Int, Double, Boolean, String 등)
 * **콘솔 출력:** `println()` 함수와 `$` 기호를 활용한 문자열 템플릿(`$변수명`, `${표현식}`)으로 콘솔에 값을 출력하는 방법을 익혔습니다.
 * **조건문 (`if/else`, `when`):** 프로그램의 흐름을 제어하는 `if/else` 문과 Kotlin의 강력한 `when` 문(Java의 switch와 유사)을 사용하여 조건에 따라 다른 코드를 실행하는 방법을 배웠습니다.
+* **반복문 (`for`, `while`):** `for` (범위, 역순, 단계), `forEachIndexed` (컬렉션), `while`, `do-while` 문을 사용하여 코드 블록을 반복 실행하는 방법을 학습했습니다.
 * **IDE 사용 기본:** IntelliJ IDEA에서 코드를 실행하고, 오류 메시지를 읽고 수정하는 과정을 경험했습니다. (특히 `.idea` 폴더 `.gitignore` 처리 및 미묘한 문법 오류 해결)
 
 ---
@@ -65,96 +66,7 @@ Kotlin에서 변수를 선언할 때는 `val`과 `var` 키워드를 사용합니
     }
     ```
 
----
-
-## 3. 사용 예시 (Day1_Summary.md)
-
-```kotlin
-package org.example
-
-fun main() {
-    // 1. val (읽기 전용/immutable) 변수 선언
-    val myName = "H"
-    val currentYear = 2025
-    val piValue = 3.14159
-
-    println("안녕하세요, 제 이름은 $myName 입니다.")
-    println("현재 연도는 $currentYear 년 입니다.") // 이전에 공백 오류 수정 경험
-    println("원주율 값은 $piValue 입니다.")
-
-    // 2. var (변경 가능/mutable) 변수 선언 및 값 변경
-    var currentStatus = "Kotlin 학습 중"
-    println("현재 상태 : $currentStatus")
-
-    currentStatus = "IntelliJ IDEA 적응 중"
-    println("변경 후 상태: $currentStatus")
-
-    var coffeeCount = 0
-    println("마신 커피 잔 수: $coffeeCount") // 이전에 $currentStatus -> $coffeeCount 오류 수정 경험
-    coffeeCount += 1
-    println("한 잔 더! 총 마신 커피 잔 수: $coffeeCount")
-
-    // 3. Boolean 타입 변수 선언
-    val isSunny = true
-    println("오늘 날씨는 화창한가요? $isSunny")
-
-    // 4. if/else 조건문 사용 예제
-    val age = 20
-    if (age >= 19) {
-        println("나이: $age -> 성인입니다.")
-    } else {
-        println("나이: $age -> 미성년자입니다.")
-    }
-
-    val temperature = 25
-    if (temperature > 30) {
-        println("온도: $temperature -> 매우 덥습니다.")
-    } else if (temperature > 20) {
-        println("온도: $temperature -> 쾌적한 날씨입니다.")
-    } else {
-        println("온도: $temperature -> 시원합니다.")
-    }
-
-    // 5. when 조건문 사용 예제
-    val dayOfWeek = 3
-    when (dayOfWeek) {
-        1 -> println("요일: $dayOfWeek -> 월요일입니다.")
-        2 -> println("요일: $dayOfWeek -> 화요일입니다.")
-        3 -> println("요일: $dayOfWeek -> 수요일입니다.")
-        in 4..5 -> println("요일: $dayOfWeek -> 목요일 또는 금요일입니다.")
-        6, 7 -> println("요일: $dayOfWeek -> 주말입니다.")
-        else -> println("요일: $dayOfWeek -> 알 수 없는 요일입니다.")
-    }
-
-    val score = 85
-    when (score) {
-        in 90..100 -> println("점수: $score -> A 학점")
-        in 80..89 -> println("점수: $score -> B 학점")
-        in 70..79 -> println("점수: $score -> C 학점")
-        else -> println("점수: $score -> F 학점")
-    }
-
-    val grade = when (score) {
-        in 90..100 -> "A"
-        in 80..89 -> "B"
-        in 70..79 -> "C"
-        else -> "F"
-    }
-    println("최종 학점은 $grade 입니다.")
-}
-
----
-
-## 1. 배운 내용 요약
-
-* ... (기존 내용) ...
-* **반복문 (`for`, `while`):** `for` (범위, 역순, 단계), `forEachIndexed` (컬렉션), `while`, `do-while` 문을 사용하여 코드 블록을 반복 실행하는 방법을 학습했습니다.
-
----
-
-## 2. 문법 개념 간단히 설명
-
-### 2.4. 반복문 (Loops)
+### **2.4. 반복문 (Loops)**
 
 코드 블록을 여러 번 반복하여 실행할 때 사용합니다.
 
@@ -186,3 +98,146 @@ fun main() {
         input = readlnOrNull() ?: ""
     } while (input != "exit")
     ```
+
+---
+
+## 3. 사용 예시 (Main.kt)
+
+```kotlin
+package org.example
+
+fun main() {
+    // 1. val (읽기 전용/immutable) 변수 선언
+    val myName = "H"
+    val currentYear = 2025
+    val piValue = 3.14159 // Double 타입 (소수점 있는 숫자)
+
+    println("안녕하세요, 제 이름은 $myName 입니다.") // 문자열 템플릿 사용
+    println("현재 연도는 $currentYear 년 입니다.")
+    println("원주율 값은 $piValue 입니다.")
+
+    // 2. var (변경 가능/mutable) 변수 선언 및 값 변경
+    var currentStatus = "Kotlin 학습 중"
+    println("현재 상태 : $currentStatus")
+
+    currentStatus = "IntelliJ IDEA 적응 중" // var 변수는 값을 변경 가능함
+    println("변경 후 상태: $currentStatus")
+
+    var coffeeCount = 0
+    println("마신 커피 잔 수: $coffeeCount")
+    coffeeCount += 1
+    println("한 잔 더! 총 마신 커피 잔 수: $coffeeCount")
+
+    // 3. Boolean 타입 변수 선언
+    val isSunny = true
+    println("오늘 날씨는 화창한가요? $isSunny")
+
+    // 4. if/else 조건문 사용 예제
+    val age = 20
+
+    if (age >= 19) {
+        println("나이: $age -> 성인입니다.")
+    } else {
+        println("나이: $age -> 미성년자입니다.")
+    }
+
+    val temperature = 25
+
+    if (temperature > 30) {
+        println("온도: $temperature -> 매우 덥습니다.")
+    } else if (temperature > 20) { // 20 초과 30 이하
+        println("온도: $temperature -> 쾌적한 날씨입니다.")
+    } else {
+        println("온도: $temperature -> 시원합니다.")
+    }
+
+    // 5. when 조건문 사용 예제 (Kotlin의 강력한 기능)
+    val dayOfWeek = 3
+
+    when (dayOfWeek) {
+        1 -> println("요일: $dayOfWeek -> 월요일입니다.")
+        2 -> println("요일: $dayOfWeek -> 화요일입니다.")
+        3 -> println("요일: $dayOfWeek -> 수요일입니다.")
+        in 4..5 -> println("요일: $dayOfWeek -> 목요일 또는 금요일입니다.")
+        6, 7 -> println("요일: $dayOfWeek -> 주말입니다.")
+        else -> println("요일: $dayOfWeek -> 알 수 없는 요일입니다.")
+    }
+
+    val score = 85
+
+    when (score) {
+        in 90..100 -> println("점수: $score -> A 학점")
+        in 80..89 -> println("점수: $score -> B 학점")
+        in 70..79 -> println("점수: $score -> C 학점")
+        else -> println("점수: $score -> F 학점")
+    }
+
+    val grade = when (score) {
+        in 90..100 -> "A"
+        in 80..89 -> "B"
+        in 70..79 -> "C"
+        else -> "F"
+    }
+    println("최종 학점은 $grade 입니다.")
+
+    // 6. for 반복문 사용 예제
+    println("\n--- for 반복문 ---")
+
+    // 1부터 5까지 출력 (정수 범위)
+    for (i in 1..5) {
+        println("for 루프 (1..5): $i")
+    }
+
+    println("-----")
+
+    // 5부터 1까지 역순으로 출력
+    for (i in 5 downTo 1) {
+        println("for 루프 (5 downTo 1): $i")
+    }
+
+    println("-----")
+
+    // 1부터 10까지 2씩 증가하며 출력 (단계별 증가)
+    for (i in 1..10 step 2) {
+        println("for 루프 (1..10 step 2): $i")
+    }
+
+    println("-----")
+
+    // 컬렉션(List) 순회
+    val programmingLanguages = listOf("Kotlin", "Java", "Python", "JavaScript")
+    println("좋아하는 프로그래밍 언어:")
+    for (lang in programmingLanguages) {
+        println("- $lang")
+    }
+
+    println("-----")
+
+    // 인덱스와 함께 컬렉션 순회 (forEachIndexed)
+    programmingLanguages.forEachIndexed { index, lang ->
+        println("인덱스 $index: $lang")
+    }
+
+    // 7. while 반복문 사용 예제
+    println("\n--- while 반복문 ---")
+
+    var counter = 0
+    while (counter < 3) {
+        println("while 루프: $counter")
+        counter++
+    }
+
+    println("-----")
+
+    // do-while 반복문 예제 (조건을 나중에 검사, 최소 한 번 실행 보장)
+    var userInput: String
+
+    do {
+        println("이름을 입력하세요 (종료하려면 'exit' 입력): ")
+        userInput = readlnOrNull() ?: ""
+        if (userInput != "exit") {
+            println("환영합니다, $userInput 님!")
+        }
+    } while (userInput != "exit")
+    println("프로그램을 종료합니다.")
+}
