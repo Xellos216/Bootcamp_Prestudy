@@ -1,6 +1,3 @@
-좋습니다! 지금까지 작성한 `Day3_Summary.md`와 `Day3_QA.md`를 기준으로, `Day3` 폴더에 들어갈 **README.md**를 `Day2` 형식에 맞춰 아래와 같이 작성해드릴게요:
-
----
 
 ````markdown
 # Day 3: Kotlin 널 안정성 실습

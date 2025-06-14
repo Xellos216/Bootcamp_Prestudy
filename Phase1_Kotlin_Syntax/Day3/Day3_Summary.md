@@ -1,7 +1,3 @@
-좋습니다! 주신 `Day2_Summary.md` 양식을 기반으로, 오늘 학습한 널 안정성 개념을 정리한 `Day3_Summary.md` 초안을 아래에 맞춰 작성해드릴게요:
-
----
-
 ````markdown
 # Day 3: Kotlin 널 안정성 (Null Safety) 실습 요약
 
